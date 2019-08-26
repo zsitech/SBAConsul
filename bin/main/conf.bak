@@ -1,0 +1,24 @@
+server:
+  port: 9999
+  
+  cloud:
+    consul:
+      host: 172.18.164.241
+      port: 8500
+      discovery:
+        instance-id: ${random.value}
+        tags: sba-server
+        service-name: ${spring.application.name}
+        health-check-path: /actuator/health
+        health-check-interval: 5s
+        health-check-url: http://localhost:9999/actuator/health  
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+      
