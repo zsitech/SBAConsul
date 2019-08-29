@@ -1,5 +1,5 @@
 server:
-  port: 9999
+  port: 10001
   
   cloud:
     consul:
@@ -11,7 +11,7 @@ server:
         service-name: ${spring.application.name}
         health-check-path: /actuator/health
         health-check-interval: 5s
-        health-check-url: http://localhost:9999/actuator/health  
+        health-check-url: http://localhost:${server.port}/actuator/health  
         
 management:
   endpoints:
