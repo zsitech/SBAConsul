@@ -1,11 +1,11 @@
 spring:
   application:
-    name: SbaConsul  #对应文件夹的名称，即配置文件存放在此文件夹里面
+    name: SbaConsul                 #对应文件夹的名称，即配置文件存放在此文件夹里面
   profiles: 
-    active: default                 #对应不带后缀的配置文件
+    active: default                 #对应配置文件
   cloud:
     config:
-      uri: http://localhost:10000    #服务端的地址172.18.164.251
+      uri: http://localhost:10000   #提供配置服务的服务器地址和端口
       
 
 
